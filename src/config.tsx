@@ -36,7 +36,7 @@ export type NavConfig = {
 export const CONFIG: NavConfig[] = [
   {
     path: "lesson-1",
-    title: "Сложные анимации с Framer Motion",
+    title: "Занятие 1: Framer Motion",
     subpath: [
       {
         title: "Пример 1: Drag-and-Drop карточка",
