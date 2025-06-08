@@ -1,4 +1,4 @@
-import  { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
@@ -17,9 +17,11 @@ export const ParticlesScene = () => {
 };
 
 const Particles = () => {
-  const particlesRef = useRef();
+  const particlesRef = useRef<THREE.Points>(null);
   useFrame(() => {
-    particlesRef.current.rotation.y += 0.01;
+    if (particlesRef.current) {
+      particlesRef.current.rotation.y += 0.01;
+    }
   });
 
   const geometry = new THREE.BufferGeometry();
@@ -45,11 +47,13 @@ const Particles = () => {
 };
 
 const ParticlesSlow = () => {
-  const groupRef = useRef();
+  const groupRef = useRef<THREE.Group>(null);
 
   // Вращение группы частиц
   useFrame(() => {
-    groupRef.current.rotation.y += 0.01;
+    if (groupRef.current) {
+      groupRef.current.rotation.y += 0.01;
+    }
   });
 
   // Создаем 1000 отдельных объектов SphereGeometry вместо BufferGeometry

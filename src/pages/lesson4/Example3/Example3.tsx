@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Torus } from "@react-three/drei";
-import type { Mesh } from "three";
+import type { Mesh, MeshStandardMaterial } from "three";
 
 const AnimatedTorus = () => {
   const meshRef = useRef<Mesh>(null);
@@ -10,7 +10,8 @@ const AnimatedTorus = () => {
     if (meshRef.current) {
       meshRef.current.rotation.y = clock.getElapsedTime();
       meshRef.current.rotation.x = -clock.getElapsedTime();
-      meshRef.current.material.color.setHSL(
+
+      (meshRef.current.material as MeshStandardMaterial).color.setHSL(
         Math.sin(clock.getElapsedTime()) * 0.5 + 0.5,
         0.5,
         0.5
