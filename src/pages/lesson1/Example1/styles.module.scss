@@ -1,0 +1,8 @@
+.DraggableCard {
+    &-wrapper {
+        align-self: center;
+        width: 300px;
+        background-image: linear-gradient(to right, red 33.33%, green 33.33% 66.66%, blue 66.66%);
+        padding: 10px 0;
+    }
+}

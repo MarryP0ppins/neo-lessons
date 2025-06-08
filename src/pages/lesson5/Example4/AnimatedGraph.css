@@ -1,0 +1,50 @@
+/* Tailwind CSS is used inline, but this file is included for compatibility */
+.relative {
+    position: relative;
+}
+
+.bg-white {
+    background: #fff;
+}
+
+.p-5 {
+    padding: 1.25rem;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.bg-gray-800 {
+    background: #2d3748;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.rounded {
+    border-radius: 0.25rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.pointer-events-none {
+    pointer-events: none;
+}
